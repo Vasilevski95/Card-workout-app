@@ -1,0 +1,20 @@
+# Card-workout-app
+
+This code implements a simple card selection game in which the user can stop a timer and select a card randomly from a deck of 52 cards.
+
+The CardSelectionVC class is a subclass of UIViewController and is responsible for managing the user interface for this game. 
+The class has an IBOutlet for a UIImageView object named cardImageView that displays the card images. 
+The cards variable is an array of 52 UIImage objects that represent a standard deck of playing cards.
+
+The viewDidLoad() method is called when the view controller's view is loaded into memory. 
+It calls the startTimer() method which creates a new Timer object and schedules it to call the showRandomImage() method every 0.1 seconds.
+
+The showRandomImage() method updates the cardImageView with a random card image from the cards array using the randomElement() method.
+
+The stopButtonTapped(_:) and restartButtonTapped(_:) methods are IBAction methods that are called when the "Stop" and "Restart" buttons are tapped, respectively. 
+The stopButtonTapped(_:) method stops the timer, while the restartButtonTapped(_:) method stops the timer and then starts it again by calling startTimer().
+
+The Deck struct represents the 52 cards in a standard deck of playing cards. It has a single static property called allValues which is an array of 52 UIImage objects. 
+Each image corresponds to a specific card in the deck, where the image name is the card rank and suit concatenated together (e.g., "2H" for the 2 of hearts).
+
+Overall, this code provides a basic card selection game with the ability to randomly select a card and stop/restart the timer that displays the card.
